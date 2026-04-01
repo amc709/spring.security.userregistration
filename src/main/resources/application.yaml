@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: spring.security.userregistration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/amc_db
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: anthony.castillon@gmail.com
+    password: tsio nada oxfo sqrt
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL:  DEBUG
+            
+server:
+  port: 9090 
