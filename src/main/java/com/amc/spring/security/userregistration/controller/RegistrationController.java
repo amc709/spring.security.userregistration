@@ -31,22 +31,5 @@ public class RegistrationController {
 		return ResponseEntity.ok(registrationService.confirmToken(token));
 	}
 
-//	@GetMapping("/home")
-//	public String showHome(@AuthenticationPrincipal AppUser user) {
-//		return """
-//				<center>
-//				<h1>Hello, %s!</h1>
-//				<h3>Welcome to our app.</h3>
-//				</center>
-//				""".formatted(user.getFirstname());
-//	}
 
-//	@GetMapping("/products")
-//	public String productsHome() {
-//		return """
-//				<center>
-//				<h1>Products</h1>
-//				</center>
-//				""";
-//	}
 }
