@@ -13,6 +13,7 @@ import com.amc.spring.security.userregistration.entity.AppUser;
 import com.amc.spring.security.userregistration.entity.Token;
 import com.amc.spring.security.userregistration.repository.AppUserRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 @Service
@@ -40,8 +41,10 @@ public class AppUserService implements UserDetailsService {
 	
 	}
 	
-	
+	@Transactional
 	public String signUpUser(AppUser appUser) {
+		
+		// Check if user exists
 		boolean userExists = appUserRepository.findByEmail((appUser.getEmail())).isPresent();
         if(userExists){
             throw new IllegalStateException("User already exists");
