@@ -1,7 +1,6 @@
 package com.amc.spring.security.userregistration.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,13 +31,22 @@ public class RegistrationController {
 		return ResponseEntity.ok(registrationService.confirmToken(token));
 	}
 
-	@GetMapping("/home")
-	public String showHome(Authentication auth) {
-		return """
-				<center>
-				<h1>Hello, %s!</h1>
-				<h3>Welcome to our app.</h3>
-				</center>
-				""".formatted(auth.getName());
-	}
+//	@GetMapping("/home")
+//	public String showHome(@AuthenticationPrincipal AppUser user) {
+//		return """
+//				<center>
+//				<h1>Hello, %s!</h1>
+//				<h3>Welcome to our app.</h3>
+//				</center>
+//				""".formatted(user.getFirstname());
+//	}
+
+//	@GetMapping("/products")
+//	public String productsHome() {
+//		return """
+//				<center>
+//				<h1>Products</h1>
+//				</center>
+//				""";
+//	}
 }

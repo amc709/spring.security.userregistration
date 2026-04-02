@@ -41,13 +41,16 @@ public class WebSecurityConfig {
 				})
 				.formLogin(form ->  
 				
-					form.successHandler((request, response, authentication ) ->{
-						response.sendRedirect("/registration/home");
-					}
+//					form.successHandler((request, response, authentication ) ->{
+//						response.sendRedirect("/registration/home");
+//					}
 				
-//					form.defaultSuccessUrl("/home", true).permitAll())
-//						.withDefaults()
-				))
+					// Redirect to requested page after successful login
+					// If you want to always redirect to the 'home' page, set
+					// second parameter to true.
+					form.defaultSuccessUrl("/welcome", false).permitAll()
+					
+				)
 				.build();
 	}
 
