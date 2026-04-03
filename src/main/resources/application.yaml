@@ -2,9 +2,9 @@ spring:
   application:
     name: spring.security.userregistration
   datasource:
-    url: jdbc:postgresql://localhost:5432/amc_db
-    username: admin
-    password: admin
+    url: jdbc:postgresql://localhost:5432/<YOUR DB NAME>
+    username: <ROOT USER>
+    password: <ROOT PASSWORD>
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

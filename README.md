@@ -8,8 +8,8 @@ The module shows how to register a new user user to the application. The code wi
      - lastName
      - email - This will serve as the user name during login.
      - password - This will be saved encrypted in the database.
-2. Application will send an email to the provided email with a link to activate the account.
-3. Once activated, the user can go into the other pages of the application.
+2. Application will send an email to the provided email with a link (with a token) to activate the account.
+3. Once activated, the user can go into the other pages of the application, after logging in.
    - /products - Will only be accessible for authenticated users
 
 ### Tools used:
